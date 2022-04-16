@@ -1,0 +1,27 @@
+package palautettavat2a;
+
+import java.util.Scanner;
+
+public class Hissi {
+
+	public static void main(String[] args) {
+		int paino;
+		int yhteensa = 0;
+		final int MAX = 240;
+		
+		do {
+		System.out.print("Paljonko painat: ");
+		Scanner input = new Scanner(System.in);
+		paino = input.nextInt();
+		yhteensa = yhteensa + paino;
+		if(yhteensa < 240 && paino != 0) {
+			System.out.println("Tule kyytiin.");
+		}else if (yhteensa > 240){
+			System.out.print("Hissi on jo täynnä. Odota seuraavaa hissiä. ");
+		}}while(yhteensa < MAX && paino !=0);
+		
+		}
+	}
+	
+
+		

@@ -1,0 +1,10 @@
+package palautettavat2a;
+
+public class Opintopisteet {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

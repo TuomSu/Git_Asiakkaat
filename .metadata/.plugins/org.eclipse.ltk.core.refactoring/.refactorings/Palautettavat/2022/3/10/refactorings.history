@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Henkilo.java&apos; to &apos;Oma harjoittelu/src/kertaus&apos;&#x0D;&#x0A;- Original project: &apos;Palautettavat&apos;&#x0D;&#x0A;- Destination element: &apos;Oma harjoittelu/src/kertaus&apos;&#x0D;&#x0A;- Original element: &apos;palautettavat6.Henkilo.java&apos;" description="Copy compilation unit" destination="=Oma harjoittelu/src&lt;kertaus" element1="/src&lt;palautettavat6{Henkilo.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1646833061632" units="1" version="1.0"/>
+</session>

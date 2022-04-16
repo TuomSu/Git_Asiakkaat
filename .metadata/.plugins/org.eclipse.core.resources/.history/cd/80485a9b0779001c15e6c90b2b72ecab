@@ -1,0 +1,36 @@
+package palautettavat2a;
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class Opintopisteet {
+
+	public static void main(String[] args) {
+		int lukukaudet, opintopisteet;
+		double opYhteensa = 0;
+		
+		System.out.print("Anna lukukausien m‰‰r‰: ");
+		Scanner input = new Scanner(System.in);
+		
+		lukukaudet = input.nextInt();
+		
+		for(int i = 1; i<=lukukaudet; i++) {
+			System.out.println("Anna " + i + ". lukukauden opintopisteesi: ");
+			opintopisteet = input.nextInt();
+			opYhteensa = opYhteensa + opintopisteet;
+		}
+		DecimalFormat des = new DecimalFormat("0.00");
+		System.out.print("Sinulla pit‰isi olla t‰h‰n menness‰ " + des.format(lukukaudet)*30 + " opintopistett‰." );
+		System.out.println("Sinulla on " + des.format(opYhteensa) + " opintopistett‰." );
+		
+		if (opYhteensa < lukukaudet*30) {
+			System.out.println("Olet j‰ljess‰ tavoitteesta.");
+			}
+		else if (opYhteensa > lukukaudet*30) {
+			System.out.println("Olet edell‰ tavoitteesta.");
+		}else {
+			System.out.println("Olet tavoitteessa.");
+		}System.out.println("Tutkinnosta puuttuu viel‰ "+ 210-opYhteensa + " opintopistett‰.");
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Lukija.java&apos; to &apos;SQLiteViikko2/src/viikko2&apos;&#x0D;&#x0A;- Original project: &apos;Ohjelmointi2&apos;&#x0D;&#x0A;- Destination element: &apos;SQLiteViikko2/src/viikko2&apos;&#x0D;&#x0A;- Original element: &apos;viikko1.Lukija.java&apos;" description="Copy compilation unit" destination="=SQLiteViikko2/src&lt;viikko2" element1="/src&lt;viikko1{Lukija.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1648709274708" units="1" version="1.0"/>
+</session>
