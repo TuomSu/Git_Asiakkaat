@@ -31,7 +31,7 @@
 <td> <input type="text" name="Sukunimi" id="Sukunimi"> </td>
 <td> <input type="text" name="Puhelin" id="Puhelin"> </td>
 <td> <input type="text" name="Sposti" id="Sposti"> </td>
-<td> <input type="submit" name="tallenna" id="Lisää"> </td>
+<td> <input type="submit" id="tallenna" value="Lisää"> </td>
 </tr>
 </tbody>
 
