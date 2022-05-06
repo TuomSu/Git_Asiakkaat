@@ -37,9 +37,10 @@ public class Asiakkaat extends HttpServlet {
 			asiakkaat = dao.listaaKaikki();
 			strJSON = new JSONObject().put("asiakkaat", asiakkaat).toString();	
 		}else if(pathInfo.indexOf("haeyksi")!=-1) {
-			String sukunimi = pathInfo.replace("/haeyksi/", "");
-			Asiakas asiakas = dao.etsiAsiakas(sukunimi);
+			int asiakas_id = Integer.parseInt(pathInfo.replace("/haeyksi/", ""));
+			Asiakas asiakas = dao.etsiAsiakas(asiakas_id);
 			JSONObject JSON = new JSONObject();
+			JSON.put("asiakas_id", asiakas.getAsiakas_id());
 			JSON.put("etunimi", asiakas.getEtunimi());
 			JSON.put("sukunimi", asiakas.getSukunimi());
 			JSON.put("puhelin", asiakas.getPuhelin());
@@ -81,8 +82,9 @@ public class Asiakkaat extends HttpServlet {
 	protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Asiakkaat.doPut()");
 		JSONObject jsonObj = new JsonStrToObj().convert(request);
-		String vanhasukunimi = jsonObj.getString("vanhasukunimi");
+		String asiakas_id = jsonObj.getString("asiakas_id");
 		Asiakas asiakas = new Asiakas();
+		asiakas.setAsiakas_id(Integer.parseInt(jsonObj.getString("asiakas_id")));
 		asiakas.setEtunimi(jsonObj.getString("Etunimi"));
 		asiakas.setSukunimi(jsonObj.getString("Sukunimi"));
 		asiakas.setPuhelin(jsonObj.getString("Puhelin"));
@@ -90,7 +92,7 @@ public class Asiakkaat extends HttpServlet {
 		response.setContentType("application/json");
 		PrintWriter out=response.getWriter();
 		Dao dao = new Dao();
-		if(dao.muutaAsiakas(asiakas, vanhasukunimi)) {
+		if(dao.muutaAsiakas(asiakas)) {
 			out.println("{\"response\":1}");
 		}else {
 			out.println("{\"response\":0}");

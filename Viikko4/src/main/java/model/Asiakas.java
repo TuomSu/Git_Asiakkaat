@@ -2,6 +2,16 @@ package model;
 
 public class Asiakas {
 private String etunimi, sukunimi, puhelin, sposti;
+private int asiakas_id;
+
+
+public int getAsiakas_id() {
+	return asiakas_id;
+}
+
+public void setAsiakas_id(int asiakas_id) {
+	this.asiakas_id = asiakas_id;
+}
 
 public Asiakas() {
 	super();
@@ -13,6 +23,15 @@ public Asiakas(String etunimi, String sukunimi, String puhelin, String sposti) {
 	this.sukunimi = sukunimi;
 	this.puhelin = puhelin;
 	this.sposti = sposti;
+}
+
+public Asiakas(String etunimi, String sukunimi, String puhelin, String sposti, int asiakas_id) {
+	super();
+	this.etunimi = etunimi;
+	this.sukunimi = sukunimi;
+	this.puhelin = puhelin;
+	this.sposti = sposti;
+	this.asiakas_id = asiakas_id;
 }
 
 public String getEtunimi() {

@@ -36,7 +36,7 @@
 </tbody>
 
 </table>
-<input type="hidden" name="vanhasukunimi" id="vanhasukunimi">
+<input type="hidden" name="asiakas_id" id="asiakas_id">
 </form>
 <span id="ilmo"> </span>
 
@@ -47,10 +47,10 @@ $("#takaisin").click(function(){
 document.location="ListaaAsiakkaat.jsp";
 });
 
-var sukunimi = requestURLParam("sukunimi");
-$.ajax({url:"asiakkaat/haeyksi/"+sukunimi, type:"GET", dataType:"json", success:function(result){
+var asiakas_id = requestURLParam("asiakas_id");
+$.ajax({url:"asiakkaat/haeyksi/"+asiakas_id, type:"GET", dataType:"json", success:function(result){
+$("#asiakas_id").val(result.asiakas_id);	
 $("#Etunimi").val(result.etunimi);
-$("#vanhasukunimi").val(result.sukunimi);
 $("#Sukunimi").val(result.sukunimi);
 $("#Puhelin").val(result.puhelin);
 $("#Sposti").val(result.sposti);
